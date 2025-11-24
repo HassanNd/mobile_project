@@ -1,4 +1,5 @@
 import 'dart:io';
+// ignore: unused_import
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../models/cv_model.dart';
@@ -39,7 +40,6 @@ class CVPreview extends StatelessWidget {
     Widget avatar;
 
     if (cv.imageBytes != null) {
-      print('CV image bytes length: ${cv.imageBytes!.lengthInBytes}');
       avatar = ClipOval(
         child: Image.memory(
           cv.imageBytes!,
@@ -49,7 +49,6 @@ class CVPreview extends StatelessWidget {
         ),
       );
     } else if (cv.imagePath != null) {
-      print('CV image path: ${cv.imagePath}');
       avatar = ClipOval(
         child: Image.file(
           File(cv.imagePath!),
@@ -59,7 +58,7 @@ class CVPreview extends StatelessWidget {
         ),
       );
     } else {
-      print('No image selected for CV');
+
       avatar = Icon(Icons.person, size: 36, color: Colors.grey[700]);
     }
 
