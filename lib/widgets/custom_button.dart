@@ -18,11 +18,17 @@ class CustomButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton.icon(
+
+        //adding icon to the button
         icon: Icon(icon),
+
+        //adding the label in the button
         label: Padding(
           padding: EdgeInsets.symmetric(vertical: 14),
           child: Text(label, style: TextStyle(fontSize: 16)),
         ),
+
+        //function on pressing
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

@@ -24,6 +24,8 @@ class CustomCheckboxGroup extends StatelessWidget {
         SizedBox(height: 6),
         Wrap(
           spacing: 8,
+
+          //mapping over the list to create a multiple checkboxes
           children: options.map((opt) {
             final isChecked = selected.contains(opt);
             return FilterChip(
@@ -31,6 +33,8 @@ class CustomCheckboxGroup extends StatelessWidget {
               selected: isChecked,
               selectedColor: Colors.blue.shade100,
               onSelected: (val) {
+
+                //creating a empty list and adding to it the selected values
                 final newSelected = List<String>.from(selected);
                 if (val) {
                   newSelected.add(opt);

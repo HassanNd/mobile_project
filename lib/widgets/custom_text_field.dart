@@ -17,8 +17,12 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+
+      //the controller for getting the value when changed
       controller: controller,
       keyboardType: keyboardType,
+
+      //styles
       decoration: InputDecoration(
         prefixIcon: Icon(icon, color: Colors.blueGrey),
         labelText: label,

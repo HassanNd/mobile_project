@@ -17,8 +17,12 @@ class CustomMultilineField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+
+      //controller for controlling the values changing
       controller: controller,
       maxLines: maxLines,
+
+      //styles
       decoration: InputDecoration(
         prefixIcon: Icon(icon, color: Colors.blueGrey),
         labelText: label,

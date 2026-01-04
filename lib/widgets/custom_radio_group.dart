@@ -19,9 +19,13 @@ class CustomRadioGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+
+      //creating the radio with making over the list
       children: [
         Text(label, style: TextStyle(fontWeight: FontWeight.w600, color: Colors.blueGrey)),
         Column(
+
+          //mapping over the list to add new radio when editing the list
           children: options.map((opt) {
             return RadioListTile<String>(
               title: Text(opt),

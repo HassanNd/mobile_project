@@ -1,6 +1,8 @@
-import 'dart:typed_data';
+
 
 class CVModel {
+  int? id; // ✅ ADD THIS
+
   String fullName;
   String professionalSummary;
   String technicalSkills;
@@ -10,10 +12,10 @@ class CVModel {
   String email;
   String linkedinUrl;
   String availability;
-  String? imagePath;      // mobile path
-  Uint8List? imageBytes;  // web image bytes
+
 
   CVModel({
+    this.id, // ✅ ADD THIS
     this.fullName = '',
     this.professionalSummary = '',
     this.technicalSkills = '',
@@ -23,7 +25,5 @@ class CVModel {
     this.email = '',
     this.linkedinUrl = '',
     this.availability = '',
-    this.imagePath,
-    this.imageBytes,
   }) : educationLevels = educationLevels ?? [];
 }
